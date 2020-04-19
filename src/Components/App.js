@@ -1,12 +1,13 @@
 import React, {Component} from 'react';
-import Router from "./Router"
-import Header from "./Header/index"
+import Router from "./Router";
+import GlobalStyle from "./GlobalStyles";
+
 class App extends Component {
   render(){
     return (
     <>
-      <Header />
       <Router/>
+      <GlobalStyle />
     </>
     );
   }
