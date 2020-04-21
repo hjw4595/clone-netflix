@@ -1,7 +1,7 @@
 import React from "react";
 import {BrowserRouter as Router, Route, Redirect,Switch} from "react-router-dom";
 import Header from "./Header"
-import Home from "../Routes/Home";
+import Home from "../Routes/Home/HomeContainer";
 import Tv from "../Routes/Tv";
 import Detail from "../Routes/Detail";
 import Search from "../Routes/Search";

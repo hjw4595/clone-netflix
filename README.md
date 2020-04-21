@@ -8,3 +8,20 @@ Home
 TV Shows 
 Search 
 Detail
+
+-api 
+
+movie { 
+Now Playing
+popular
+upcoming
+}
+
+ tv{
+airingToday
+top rate
+popular
+ }
+ 
+
+ * .env 파일에 NODE_PATH 설정시 경고뜸 -> jsconfig.json 생성
