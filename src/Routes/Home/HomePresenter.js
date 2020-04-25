@@ -2,13 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import Section from "../../Components/Section";
-
+import Loading from "../../Components/Loader";
 const Container = styled.div`
     padding : 0 10px;
 `;
 
 const HomePresenter = ({ nowPlaying, popular, upcoming, loading, error }) =>
-    loading ? error : 
+    loading ? <Loading></Loading> : 
     <Container>
         {nowPlaying && nowPlaying.length > 0 && (
         <Section title="nowPlaying">{nowPlaying.map(movie => movie.title)}</Section>
