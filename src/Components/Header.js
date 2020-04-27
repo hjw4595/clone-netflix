@@ -10,9 +10,11 @@ const Item = styled.li`
     height: 50px;
     text-align: center;
     border-bottom:3px solid ${props => props.selected ? "green" : "transparent"};
-    transition: border-bottom .5s ease-in-out;
+    color: ${props => props.selected ? "green" : "white"};
+    transition: border-bottom, color .5s ease-in-out;
 `;
 const Header = styled.header`
+    font-size: 18px;
     color: white;
     position: fixed;
     top: 0;
@@ -22,7 +24,6 @@ const Header = styled.header`
     align-items: center;
     background-color: rgba(20, 20, 20, 0.8);
     z-index: 10;
-    box-shadow: 0px 1px 5px 2px rgba(0, 150, 150, 0.8);
 `;
 
 const Hlink = styled(Link)`
