@@ -38,8 +38,8 @@ export default withRouter(({location : {pathname} }) => (
             <Item selected ={pathname ==="/"}> 
                 <Hlink to="/">Movies</Hlink>
             </Item>
-            <Item selected ={pathname ==="/TV"}>
-                <Hlink to="/TV">TV</Hlink>
+            <Item selected ={pathname ==="/tv"}>
+                <Hlink to="/tv">TV</Hlink>
             </Item>
             <Item selected ={pathname ==="/Search"}>
                 <Hlink to="/Search">Search</Hlink>

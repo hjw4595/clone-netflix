@@ -13,12 +13,12 @@ export default () => (
             <Switch>
                 <Route path="/" exact component={Home}/>
 
-                <Route path="/TV" exact component={Tv}/>
+                <Route path="/tv" exact component={Tv}/>
 
                 <Route path="/Search" component={Search}/>
 
                 <Route path="/movie/:id" component={Detail} />
-                <Route path="/Tv/:id" component={Detail} />
+                <Route path="/tv/:id" component={Detail} />
                 
                 <Redirect from="*" to="/"/>
             </Switch>
