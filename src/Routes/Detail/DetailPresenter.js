@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import Loading from "../../Components/Loader";
 import { Helmet } from "react-helmet";
+import Poster from "../../Components/Poster";
+import Navbar from "Components/Navbar";
 
 const Container = styled.div`
   height: calc(100vh - 50px);
@@ -66,6 +68,16 @@ const Overview = styled.p`
   opacity: 0.7;
   line-height: 1.5;
   width: 50%;
+`;
+
+const Grid = styled.div`
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 125px);
+  grid-gap: 25px;
+`;
+
+const CompanyTab = styled.div`
 `;
 
 const DetailPresenter = ({ result, loading, error }) =>

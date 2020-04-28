@@ -12,6 +12,7 @@ export default class extends React.Component {
       result: null,
       error: null,
       loading: true,
+      video: null,
       isMovie: pathname.includes("/movie/")
     };
   }
@@ -48,7 +49,7 @@ export default class extends React.Component {
   
 
   render() {
-    const { result, error, loading } = this.state;
-    return <DetailPresenter result={result} error={error} loading={loading} />;
+    const { result, error, loading , video } = this.state;
+    return <DetailPresenter result={result} error={error} loading={loading} video={video} />;
   }
 }

@@ -23,5 +23,7 @@ top rate
 popular
  }
  
+ detail 
+ add tap 
 
  * .env 파일에 NODE_PATH 설정시 경고뜸 -> jsconfig.json 생성
