@@ -32,16 +32,15 @@ const Hlink = styled(Link)`
 `;
 export default withRouter(({location : {pathname} }) => (
     <Navbar> 
-        {console.log(pathname)}
         <List>
-            <Item selected = {pathname ==="/tv"}>
-                <Hlink to={`${pathname}/company`}>company</Hlink>
+            <Item selected = {pathname ==="/tv"} >
+                <Hlink to={`${pathname}/tab-company`}>company</Hlink>
             </Item>
             <Item selected ={pathname ==="/tv"}>
-                <Hlink to={`${pathname}/video`}>video</Hlink>
+                <Hlink to={`${pathname}/tab-video`}>video</Hlink>
             </Item>
             <Item selected ={pathname ==="/Search"}>
-                <Hlink to={`${pathname}/cell`}>cell</Hlink>
+                <Hlink to={`${pathname}/tab-cell`}>cell</Hlink>
             </Item>
         </List>
     </Navbar>
