@@ -5,6 +5,7 @@ import Home from "../Routes/Home/HomeContainer";
 import Tv from "../Routes/Tv";
 import Detail from "../Routes/Detail";
 import Search from "../Routes/Search";
+import Collection from "../Routes/Collection";
 
 export default () => (
     <Router>
@@ -20,7 +21,8 @@ export default () => (
                 <Route path="/movie/:id" component={Detail} />
                 <Route path="/tv/:id" component={Detail} />
                 
-                <Route path="/movie/collection" component={Detail} />
+                <Route path="/movie/:id" component={Collection} />
+                <Route path="/collection/:id" component={Collection} />
 
                 <Redirect from="*" to="/"/>
             </Switch>

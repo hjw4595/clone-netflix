@@ -10,16 +10,8 @@ export default class extends React.Component {
     };
 
     async componentDidMount() {
-        const {
-            match: {
-                params: { id },
-            },
-            history: { push },
-        } = this.props;
+        const { result : { id } } = this.props;
         const parsedId = parseInt(id);
-        if (isNaN(parsedId)) {
-            return push('/');
-        }
         let result = null;
         try {
             ({ data: result } = await collectionApi.collectionDetail(parsedId));
@@ -32,7 +24,6 @@ export default class extends React.Component {
 
     render() {
         const { result, error, loading } = this.state;
-        console.log(result);
         return <CollectionPresenter result={result} error={error} loading={loading} />;
     }
 }

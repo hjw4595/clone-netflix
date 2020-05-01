@@ -3,10 +3,11 @@ import styled from "styled-components";
 import Videos from "./video";
 import Company from "./company";
 import Section from "../../../Components/Section";
-// import Collection from "../../Collection/index";
+import Collection from "../../Collection/index"
 
 const Container = styled.div`
-    height : 50vh;
+    height : 100%;
+    padding: 30px;
 `;
 const List = styled.ul`
     display: flex;
@@ -29,8 +30,12 @@ const Tabs = ({ result }) => (
             <Item selected={1}>
                 video
             </Item>
+            <Item selected={1}>
+                collection
+            </Item>
         </List>
-        <Videos result={result}></Videos>
+        {result.belongs_to_collection && (<Collection result={result.belongs_to_collection} />)}
+        {result.videos && (<Videos result={result} />)}
         {result.production_companies && result.production_companies.length > 0 && ( 
                     <Section title="production_companies">{
                         result.production_companies.map(company => <Company
