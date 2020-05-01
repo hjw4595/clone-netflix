@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Loading from "../../Components/Loader";
 import { Helmet } from "react-helmet";
 import Tab from "./Tab/Tabs"
+import Collection from "../Collection/index";
 
 const Container = styled.div`
   height: calc(100vh - 50px);
@@ -126,6 +127,7 @@ const DetailPresenter = ({ result, loading, error }) =>
           <Overview>{result.overview}</Overview>
           <Tab result={result} />
         </Data>
+        <Collection></Collection>
       </Content>
     </Container>
   );

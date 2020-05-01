@@ -1,6 +1,6 @@
 import React from "react";
 import DetailPresenter from "./DetailPresenter";
-import { moviesApi, tvApi } from "../../api";
+import { moviesApi, tvApi} from "../../api";
 
 export default class extends React.Component {
   constructor(props) {
@@ -32,9 +32,8 @@ export default class extends React.Component {
     }
     let result = null;
     try {
-      if (isMovie) {(
-        {data : result } = await moviesApi.movieDetail(parsedId)
-        );
+      if (isMovie) {
+        ({data : result } = await moviesApi.movieDetail(parsedId));
       } else {(
         {data : result } = await tvApi.showDetail(parsedId)
        );
@@ -49,7 +48,7 @@ export default class extends React.Component {
   
 
   render() {
-    const { result, error, loading , video } = this.state;
+    const { result, error, loading , video  } = this.state;
     return <DetailPresenter result={result} error={error} loading={loading} video={video} />;
   }
 }
